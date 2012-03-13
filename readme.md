@@ -43,18 +43,18 @@ See the [Underscore.js](http://documentcloud.github.com/underscore/) documentati
 
 #### Mutator Methods ####
 
-* filter_, select\_
-* reject_
-* invoke_
-* sortBy_
-* groupBy_
-* shuffle_
-* rest_, tail\_
-* compact_
-* flatten_
-* without_
-* union_
-* intersection_
-* difference_
-* uniq_, unique\_
-* zip_
+* `filter_`, `select_`
+* `reject_`
+* `invoke_`
+* `sortBy_`
+* `groupBy_`
+* `shuffle_`
+* `rest_`, `tail_`
+* `compact_`
+* `flatten_`
+* `without_`
+* `union_`
+* `intersection_`
+* `difference_`
+* `uniq_`, `unique_`
+* `zip_`

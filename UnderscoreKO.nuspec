@@ -4,17 +4,18 @@
     <id>UnderscoreKO</id>
     <version>1.0.0</version>
     <authors>Kamran Ayub</authors>
-    <description>Adds all the useful collection and array methods from Underscore.js to Knockout observable arrays. Also includes several convenience methods to maniuplate the underlying array.</description>
-    <language>en-US</language>
+    <description>Adds all the useful collection and array methods from Underscore.js to Knockout observable arrays. Also includes several convenience methods to manipulate the underlying array.</description>    
     <projectUrl>https://github.com/kamranayub/UnderscoreKO</projectUrl>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <tags>knockoutjs knockout underscore underscorejs javascript js</tags>
+    <releaseNotes>Initial version</releaseNotes>
     <dependencies>
       <dependency id="knockoutjs" version="2.0" />
       <dependency id="underscore.js" version="1.3" />
     </dependencies>
   </metadata>
   <files>
-    <file src="underscore-ko.js" target="content" />
-    <file src="underscore-ko.min.js" target="content" />
+    <file src="underscore-ko.js" target="content/Scripts/underscore-ko-1.0.0.js" />
+    <file src="underscore-ko.min.js" target="content/Scripts/underscore-ko-1.0.0.min.js" />
   </files>
 </package>
