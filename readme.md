@@ -41,6 +41,32 @@ vm.arr.without_(2);
 // Without this, you would need to do:
 vm.arr(vm.arr.without(2));
 ```
+#### Full Example ####
+
+```html
+<script type="text/javascript">
+    var vm = {
+        peeps: ko.observableArray([{name: "Kamran"}, {name: "John"}])
+    };
+
+    vm.peepsAlt = ko.computed(function () {
+        return this.peeps.union([{ name: "Sam" }, { name: "Steve" }]);
+    }, vm);
+
+    $(function() {
+        ko.applyBindings(vm);
+    });
+</script>
+
+<ul data-bind="foreach: peeps">
+    <li data-bind="text: name"></li>
+</ul>
+
+<ul data-bind="foreach: peepsAlt">
+    <li data-bind="text: name"></li>
+</ul>
+```
+
 See the [Underscore.js](http://documentcloud.github.com/underscore/) documentation for more information on the API.
 
 See `spec.js` for examples of how to use specific functions, but I'm telling you, it's as you'd expect.
