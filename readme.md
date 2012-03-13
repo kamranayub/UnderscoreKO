@@ -43,29 +43,9 @@ vm.arr(vm.arr.without(2));
 ```
 #### Full Example ####
 
-```html
-<script type="text/javascript">
-    var vm = {
-        peeps: ko.observableArray([{name: "Kamran"}, {name: "John"}])
-    };
+View the [live jsFiddle demo](http://jsfiddle.net/kamranayub/exnqe/)
 
-    vm.peepsAlt = ko.computed(function () {
-        return this.peeps.union([{ name: "Sam" }, { name: "Steve" }]);
-    }, vm);
-
-    $(function() {
-        ko.applyBindings(vm);
-    });
-</script>
-
-<ul data-bind="foreach: peeps">
-    <li data-bind="text: name"></li>
-</ul>
-
-<ul data-bind="foreach: peepsAlt">
-    <li data-bind="text: name"></li>
-</ul>
-```
+<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/kamranayub/exnqe/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 See the [Underscore.js](http://documentcloud.github.com/underscore/) documentation for more information on the API.
 
