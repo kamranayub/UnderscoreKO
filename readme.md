@@ -27,12 +27,14 @@ vm.arr.each(function (x) {
     // do something
 });
 
+// This returns a raw array, not a ko.observableArray
 var newArr = vm.arr.union([0, 1]);
 ```
 
 In addition, there are several functions you can use that will mutate (change) the underlying array, which are provided as convenient shortcuts.
 
 ```js
+// Re-structure the observable array [1, 2, 3]
 vm.arr.without_(2);
 // vm.arr() is now equal to [1, 3]
 
@@ -40,6 +42,8 @@ vm.arr.without_(2);
 vm.arr(vm.arr.without(2));
 ```
 See the [Underscore.js](http://documentcloud.github.com/underscore/) documentation for more information on the API.
+
+See `spec.js` for examples of how to use specific functions, but I'm telling you, it's as you'd expect.
 
 #### Mutator Methods ####
 
