@@ -34,7 +34,6 @@ describe("UnderscoreKO", function () {
   singleArgFns = [
     "include", "contains",
     "sortedIndex",
-    "indexOf",
     "lastIndexOf"
   ],
   arrayArgFns = [
@@ -46,7 +45,8 @@ describe("UnderscoreKO", function () {
     "invoke",
     "pluck",    
     "shuffle",
-    "without"    
+    "without",
+    "chain"
   ],
   mutators = [
     "filter_", "select_",
@@ -157,6 +157,20 @@ describe("UnderscoreKO", function () {
 
   it("supports without", function () {
     expect(vm.arr.without(0, 1, 2)).toEqual([3, 4]);
+  });
+
+  it("supports chaining", function () {
+    var result = vm.arr.chain().filter(function (num) {
+      return num > 1;
+    }).without(4).value();
+
+    expect(result).toEqual([2, 3]);
+  });
+
+  it("supports invoking KO arrays", function () {
+    var array = ko.observableArray([5, 6, 7]);
+
+    expect(vm.arr.union(array)).toEqual([0, 1, 2, 3, 4, 5, 6, 7]);
   });
 
   describe("it mutates", function () {
@@ -278,6 +292,14 @@ describe("UnderscoreKO", function () {
         [3, "d", 40],
         [4, "e", 50]
       ]);
+    });
+
+    it("mutates when using KO arrays", function () {
+      var array = ko.observableArray([5, 6, 7]);
+
+      mutable.union_(array);
+
+      expect(mutable()).toEqual([0, 1, 2, 3, 4, 5, 6, 7]);
     });
   });
 });
