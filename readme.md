@@ -2,7 +2,7 @@
 
 ## [Underscore.js](http://documentcloud.github.com/underscore/) + [Knockout](http://knockoutjs.com) = Array Happy Fun Time! ##
 
-This tiny library adds all the collection and array methods you've come to love in Underscore.js to your Knockout observable arrays. It will not override any existing functionality (if any exists).
+This tiny library (< 1KB) adds all the collection and array methods you've come to love in Underscore.js to your Knockout observable arrays. It will not override any existing functionality (if any exists).
 
 ## Install ##
 
@@ -12,7 +12,9 @@ Download `underscore-ko.min.js` and put it in your project.
 
 ### Nuget ###
 
-Install the UnderscoreKO Nuget package.
+Install the [UnderscoreKO](http://nuget.org/packages/UnderscoreKO) Nuget package.
+
+    PM> Install-Package UnderscoreKO
 
 ## Usage ##
 
@@ -41,37 +43,17 @@ vm.arr.without_(2);
 // Without this, you would need to do:
 vm.arr(vm.arr.without(2));
 ```
-#### Full Example ####
+## Live Demo ##
 
-```html
-<script type="text/javascript">
-    var vm = {
-        peeps: ko.observableArray([{name: "Kamran"}, {name: "John"}])
-    };
+View the [live jsFiddle demo](http://jsfiddle.net/kamranayub/exnqe/)
 
-    vm.peepsAlt = ko.computed(function () {
-        return this.peeps.union([{ name: "Sam" }, { name: "Steve" }]);
-    }, vm);
+## Documentation ##
 
-    $(function() {
-        ko.applyBindings(vm);
-    });
-</script>
-
-<ul data-bind="foreach: peeps">
-    <li data-bind="text: name"></li>
-</ul>
-
-<ul data-bind="foreach: peepsAlt">
-    <li data-bind="text: name"></li>
-</ul>
-```
-
-See the [Underscore.js](http://documentcloud.github.com/underscore/) documentation for more information on the API.
+See the [Underscore.js](http://documentcloud.github.com/underscore/) documentation for more information on the API. All array and collection methods are supported with the exception of any I felt didn't provide value (`.toArray()` for example).
 
 See `spec.js` for examples of how to use specific functions, but I'm telling you, it's as you'd expect.
 
-#### Mutator Methods ####
+### Mutator Methods ###
 
 * `filter_`, `select_`
 * `reject_`
