@@ -8,7 +8,7 @@
     <projectUrl>https://github.com/kamranayub/UnderscoreKO</projectUrl>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
     <tags>knockoutjs knockout underscore underscorejs javascript js</tags>
-    <releaseNotes>Initial version</releaseNotes>
+    <releaseNotes>Added chain(), removed indexOf(), fixed mutator bug</releaseNotes>
     <dependencies>
       <dependency id="knockoutjs" version="2.0" />
       <dependency id="underscore.js" version="1.3" />
