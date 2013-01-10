@@ -10,7 +10,7 @@ Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.p
 
 ### Manual ###
 
-Download `underscore-ko.min.js` and put it in your project.
+Download `.build\underscore-ko.min.js` and put it in your project.
 
 ### Nuget ###
 
@@ -72,3 +72,15 @@ See `spec.js` for examples of how to use specific functions, but I'm telling you
 * `difference_`
 * `uniq_`, `unique_`
 * `zip_`
+
+## Contributing
+
+Install UglifyJS2
+
+	npm install -g uglify-js
+
+To run the specs, browse to **specs\SpecRunner.html**
+
+To build:
+
+	build.bat

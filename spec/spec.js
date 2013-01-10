@@ -1,7 +1,7 @@
 describe("UnderscoreKO", function () {
   var vm = {
     arr: ko.observableArray([0, 1, 2, 3, 4]),
-    objs: ko.observableArray([{a:"a"},{a:"b"},{a:"c"}])
+    objs: ko.observableArray([{a:"a",b:1},{a:"b",b:2},{a:"c",b:1}])
   },
   predicateFns = [
     "find", "detect",
@@ -41,9 +41,10 @@ describe("UnderscoreKO", function () {
     "intersection", 
     "zip"
   ],
-  miscFns = [    
+  miscFns = [   
+    "where", 
     "invoke",
-    "pluck",    
+    "pluck",        
     "shuffle",
     "without",
     "chain"
@@ -66,7 +67,7 @@ describe("UnderscoreKO", function () {
     "zip_"
   ];
 
-  it("supports all 45 underscore methods", function () {
+  it("supports all 46 underscore methods", function () {
     var count = 0;
 
     _.union(predicateFns, reductionFns, noArgFns, singleArgFns, arrayArgFns, miscFns).forEach(function (fn) {
@@ -74,7 +75,7 @@ describe("UnderscoreKO", function () {
       expect(vm.arr[fn]).toBeDefined();
     });
 
-    expect(count).toEqual(45);
+    expect(count).toEqual(46);
   });
 
   it("supports 18 mutator methods", function () {
@@ -137,6 +138,10 @@ describe("UnderscoreKO", function () {
 
       expect(expected).toEqual(actual);
     });
+  });
+
+  it("supports where", function () {
+    expect(vm.objs.where({b:1})).toEqual([vm.objs()[0],vm.objs()[2]]);
   });
 
   it("supports invoke", function () {

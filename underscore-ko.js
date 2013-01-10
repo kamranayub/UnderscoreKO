@@ -1,15 +1,13 @@
-<<<<<<< HEAD
-// UnderscoreKO Mashup Library v1.1.0
-// (c) Kamran Ayub - http://github.com/kamranayub/UnderscoreKO
-// License: MIT (http://www.opensource.org/licenses/mit-license.php)
-//
-// Adds all 45 Underscore.js collection and array methods to
-// KO observable arrays.
-=======
-// UnderscoreKO v$version$
-// (c) Kamran Ayub - http://github.com/kamranayub/UnderscoreKO
-// License: MIT (http://www.opensource.org/licenses/mit-license.php)
->>>>>>> Build file
+/**
+ * UnderscoreKO Mashup Library v$version$
+ * (c) Kamran Ayub - http://github.com/kamranayub/UnderscoreKO
+ *
+ * @license MIT (http://www.opensource.org/licenses/mit-license.php)
+ *
+ * Adds all 46 Underscore.js collection and array methods to
+ * KO observable arrays.
+ *
+ */
 
 (function (ko, _, undefined) {
 
@@ -22,10 +20,7 @@
     "reduceRight", "foldr",
     "find", "detect",
     "filter", "select", "filter_", "select_",
-<<<<<<< HEAD
-	"where",
-=======
->>>>>>> Build file
+    "where",
     "reject", "reject_",
     "all", "every",
     "any", "some",
@@ -36,16 +31,12 @@
     "min",
     "sortBy", "sortBy_",
     "groupBy", "groupBy_",
-<<<<<<< HEAD
-	"countBy", 
-=======
->>>>>>> Build file
+    "countBy", 
     "sortedIndex",
     "shuffle", "shuffle_",
     "size",
 
     // Arrays
-<<<<<<< HEAD
     "first", "head","take",
     "initial",
     "last",
@@ -53,27 +44,16 @@
     "compact", "compact_",
     "flatten", "flatten_",
     "without", "without_",
-	"union","union_",
-	"intersection",
-	"difference",
+    "union","union_",
+    "intersection",
+    "difference",
     "uniq", "unique", "uniq_", "unique_",
-	"zip","zip_",
-	"object",
-	"indexOf",
+    "zip","zip_",
+    "object",
+    "indexOf",
     "lastIndexOf",
-	"sortedIndex",
-	"range",
-=======
-    "first", "head",
-    "initial",
-    "last",
-    "rest", "tail", "rest_", "tail_",
-    "compact", "compact_",
-    "flatten", "flatten_",
-    "without", "without_",
-    "uniq", "unique", "uniq_", "unique_",
-    "lastIndexOf",
->>>>>>> Build file
+    "sortedIndex",
+    "range",
 
     // Misc
     "chain"
