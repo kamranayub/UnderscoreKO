@@ -27,10 +27,9 @@
     "min",
     "sortBy", "sortBy_",
     "groupBy", "groupBy_",
-	"countBy", "countBy_",
+	"countBy", 
     "sortedIndex",
     "shuffle", "shuffle_",
-	//"toArray", "toArray_",
     "size",
 
     // Arrays
@@ -42,8 +41,8 @@
     "flatten", "flatten_",
     "without", "without_",
 	"union","union_",
-	"intersection","intersection_",
-	"difference","difference_",
+	"intersection",
+	"difference",
     "uniq", "unique", "uniq_", "unique_",
 	"zip","zip_",
 	"object",
