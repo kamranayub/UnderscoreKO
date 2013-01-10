@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["build"],
+			"file_exclude_patterns": ["LICENSE", ".git*", "*.sublime-workspace"]
+		}
+	],
+	"settings":
+	{
+		"tab_size": 2
+	}
+}
