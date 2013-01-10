@@ -4,6 +4,8 @@
 
 This tiny library (< 1KB) adds all the collection and array methods you've come to love in Underscore.js to your Knockout observable arrays. It will not override any existing functionality (if any exists).
 
+Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+
 ## Install ##
 
 ### Manual ###

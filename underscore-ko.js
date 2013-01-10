@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 // UnderscoreKO Mashup Library v1.1.0
 // (c) Kamran Ayub - http://github.com/kamranayub/UnderscoreKO
 // License: MIT (http://www.opensource.org/licenses/mit-license.php)
 //
 // Adds all 45 Underscore.js collection and array methods to
 // KO observable arrays.
+=======
+// UnderscoreKO v$version$
+// (c) Kamran Ayub - http://github.com/kamranayub/UnderscoreKO
+// License: MIT (http://www.opensource.org/licenses/mit-license.php)
+>>>>>>> Build file
 
 (function (ko, _, undefined) {
 
@@ -16,7 +22,10 @@
     "reduceRight", "foldr",
     "find", "detect",
     "filter", "select", "filter_", "select_",
+<<<<<<< HEAD
 	"where",
+=======
+>>>>>>> Build file
     "reject", "reject_",
     "all", "every",
     "any", "some",
@@ -27,12 +36,16 @@
     "min",
     "sortBy", "sortBy_",
     "groupBy", "groupBy_",
+<<<<<<< HEAD
 	"countBy", 
+=======
+>>>>>>> Build file
     "sortedIndex",
     "shuffle", "shuffle_",
     "size",
 
     // Arrays
+<<<<<<< HEAD
     "first", "head","take",
     "initial",
     "last",
@@ -50,6 +63,17 @@
     "lastIndexOf",
 	"sortedIndex",
 	"range",
+=======
+    "first", "head",
+    "initial",
+    "last",
+    "rest", "tail", "rest_", "tail_",
+    "compact", "compact_",
+    "flatten", "flatten_",
+    "without", "without_",
+    "uniq", "unique", "uniq_", "unique_",
+    "lastIndexOf",
+>>>>>>> Build file
 
     // Misc
     "chain"
