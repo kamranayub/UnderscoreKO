@@ -1,13 +1,6 @@
-/**
- * UnderscoreKO Mashup Library v$version$
- * (c) Kamran Ayub - http://github.com/kamranayub/UnderscoreKO
- *
- * @license MIT (http://www.opensource.org/licenses/mit-license.php)
- *
- * Adds all 46 Underscore.js collection and array methods to
- * KO observable arrays.
- *
- */
+/*! underscore-ko - v1.2.2 - 2013-01-15
+* https://github.com/kamranayub/UnderscoreKO
+* Copyright (c) 2013 ; Licensed MIT */
 
 (function (ko, _, undefined) {
 
@@ -94,7 +87,7 @@
             // Call original _ method        
             return _[fn].apply(this, args);
         }
-      }
+      };
     }
   });
 

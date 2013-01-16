@@ -18,7 +18,7 @@ describe("UnderscoreKO", function () {
     "each", "forEach",
     "map", "collect",
     "reduce", "inject", "foldl",
-    "reduceRight", "foldr",
+    "reduceRight", "foldr"
   ],
   noArgFns = [
     "size",
@@ -228,7 +228,7 @@ describe("UnderscoreKO", function () {
         return num > 2;
       });
 
-      expect(mutable()).toEqual({ false: [0, 1, 2], true: [3, 4]});
+      expect(mutable()).toEqual({ "false": [0, 1, 2], "true": [3, 4]});
     });
 
     it("via shuffle_", function () {
