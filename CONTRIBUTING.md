@@ -13,7 +13,7 @@
 
 Install dependencies
 
-  $ npm install
+	$ npm install
 
 Install Grunt-CLI globally
 
