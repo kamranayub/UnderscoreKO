@@ -10,7 +10,7 @@ Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.p
 
 ### Manual ###
 
-Download `.build\underscore-ko.min.js` and put it in your project.
+Download `.\build\underscore-ko-{version}.min.js` and put it in your project.
 
 ### Nuget ###
 
