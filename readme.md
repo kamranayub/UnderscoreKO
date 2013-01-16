@@ -75,29 +75,4 @@ See `spec.js` for examples of how to use specific functions, but I'm telling you
 
 ## Contributing
 
-### Prerequisites
-
-- Node.js
-- Sublime Text 2 (for optimal environment)
-
-### Configuring environment
-
-Install dependencies
-
-	$ npm install
-
-Install Grunt-CLI globally
-
-	$ npm install -g grunt-cli
-
-To run the specs, browse to **specs\SpecRunner.html**
-
-To build:
-
-	$ grunt
-
-Or on Windows:
-
-	grunt.cmd
-	
-This will run the grunt tasks inside `grunt.js`.
+See [Contributing](CONTRIBUTING.md)
