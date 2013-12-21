@@ -1,4 +1,11 @@
-(function (ko, _, undefined) {
+(function (factory) {
+  if (typeof define === 'function' && define['amd']) {
+    // AMD Anonymous module
+    define(['knockout', 'underscore'], factory);
+  } else {
+    factory(window['ko'], window['_']);
+  }
+}(function (ko, _, undefined) {
 
   /* _ methods that take the list as the first arg (and their aliases) */
   var methods = [
@@ -87,4 +94,5 @@
     }
   });
 
-})(ko, _);
+})
+);
