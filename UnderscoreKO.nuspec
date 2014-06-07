@@ -8,10 +8,10 @@
     <projectUrl>https://github.com/kamranayub/UnderscoreKO</projectUrl>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
     <tags>knockoutjs knockout underscore underscorejs javascript js</tags>
-    <releaseNotes>Updated to support _.where in Underscore 1.4.3</releaseNotes>
+    <releaseNotes>See GitHub releases for changelog</releaseNotes>
     <dependencies>
-      <dependency id="knockoutjs" version="1.2" />
-      <dependency id="underscore.js" version="1.2" />
+      <dependency id="knockoutjs" version="2.2" />
+      <dependency id="underscore.js" version="1.6.0" />
     </dependencies>
   </metadata>
   <files>

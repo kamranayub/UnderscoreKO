@@ -12,7 +12,10 @@ describe("UnderscoreKO", function () {
     "max",
     "min",
     "sortBy",
-    "groupBy"
+    "indexBy",
+    "countBy",    
+    "groupBy",
+    "partition"
   ],
   reductionFns = [
     "each", "forEach",
@@ -33,6 +36,7 @@ describe("UnderscoreKO", function () {
   ],
   singleArgFns = [
     "include", "contains",
+    "sample",
     "sortedIndex",
     "lastIndexOf"
   ],
@@ -43,6 +47,7 @@ describe("UnderscoreKO", function () {
   ],
   miscFns = [   
     "where", 
+    "findWhere",
     "invoke",
     "pluck",        
     "shuffle",
@@ -67,7 +72,7 @@ describe("UnderscoreKO", function () {
     "zip_"
   ];
 
-  it("supports all 46 underscore methods", function () {
+  it("supports all 51 underscore methods", function () {
     var count = 0;
 
     _.union(predicateFns, reductionFns, noArgFns, singleArgFns, arrayArgFns, miscFns).forEach(function (fn) {
@@ -75,7 +80,7 @@ describe("UnderscoreKO", function () {
       expect(vm.arr[fn]).toBeDefined();
     });
 
-    expect(count).toEqual(46);
+    expect(count).toEqual(51);
   });
 
   it("supports 18 mutator methods", function () {

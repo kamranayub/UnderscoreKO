@@ -1,7 +1,7 @@
 {
   "name": "underscore-ko",
   "description": "Attaches Underscore.js array and collection functions (and mutators) to Knockout.js observable arrays.",
-  "version": "1.2.2",
+  "version": "1.6.0",
   "author": "Kamran Ayub (http://kamranicus.com)",
   "homepage": "https://github.com/kamranayub/UnderscoreKO",
   "repository": {
@@ -18,11 +18,17 @@
     }
   ],
   "dependencies": {
-    "underscore": "~1.4.3",
+    "underscore": "~1.6.0",
     "knockout-client": "~2.2.0"
   },
   "devDependencies": {
-    "grunt": "~0.3.17",
-    "grunt-shell": "~0.1.4"
+    "grunt": "~0.4.5",
+    "grunt-shell": "~0.7.0",
+    "grunt-jslint": "~1.1.12",
+    "grunt-concat": "~0.1.6",
+    "grunt-min": "~0.1.0",
+    "grunt-jasmine-node": "~0.2.1",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-clean": "~0.5.0"
   }
 }

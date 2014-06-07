@@ -1,8 +1,14 @@
-/*! underscore-ko - v1.2.2 - 2013-01-15
-* https://github.com/kamranayub/UnderscoreKO
-* Copyright (c) 2013 ; Licensed MIT */
-
-(function (ko, _, undefined) {
+// underscore-ko - v1.6.0 - 2014-06-07
+// https://github.com/kamranayub/UnderscoreKO
+// Copyright (c) 2014 Kamran Ayub (http://kamranicus.com); Licensed MIT */
+(function (factory) {
+  if (typeof define === 'function' && define['amd']) {
+    // AMD Anonymous module
+    define(['knockout', 'underscore'], factory);
+  } else {
+    factory(window['ko'], window['_']);
+  }
+}(function (ko, _, undefined) {
 
   /* _ methods that take the list as the first arg (and their aliases) */
   var methods = [
@@ -14,6 +20,7 @@
     "find", "detect",
     "filter", "select", "filter_", "select_",
     "where",
+    "findWhere",
     "reject", "reject_",
     "all", "every",
     "any", "some",
@@ -24,24 +31,27 @@
     "min",
     "sortBy", "sortBy_",
     "groupBy", "groupBy_",
+    "indexBy",
     "countBy", 
     "sortedIndex",
     "shuffle", "shuffle_",
+    "sample",
     "size",
 
     // Arrays
-    "first", "head","take",
+    "first", "head", "take",
     "initial",
     "last",
-    "rest", "tail", "rest_", "tail_","drop","drop_",
+    "rest", "tail", "drop", "rest_", "tail_", "drop_",
     "compact", "compact_",
     "flatten", "flatten_",
     "without", "without_",
+    "partition",
     "union","union_",
     "intersection",
     "difference",
     "uniq", "unique", "uniq_", "unique_",
-    "zip","zip_",
+    "zip", "zip_",
     "object",
     "indexOf",
     "lastIndexOf",
@@ -91,4 +101,5 @@
     }
   });
 
-})(ko, _);
+})
+);
