@@ -47,7 +47,7 @@ vm.arr(vm.arr.without(2));
 ```
 ## Live Demo ##
 
-View the [live jsFiddle demo](http://jsfiddle.net/daedalus28/exnqe/39/)
+View the [live jsFiddle demo](http://jsfiddle.net/kamranayub/exnqe/)
 
 ## Documentation ##
 
