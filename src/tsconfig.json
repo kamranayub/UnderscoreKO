@@ -1,0 +1,16 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "amd",
+    "sourceMap": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": false
+  },
+  "files": [
+    "../typings/browser/ambient/knockout/index.d.ts",
+    "../typings/browser/ambient/underscore/index.d.ts",
+    "underscore-ko.ts",
+    "interface.ts"
+  ]
+}

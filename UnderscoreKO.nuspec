@@ -10,11 +10,12 @@
     <tags>knockoutjs knockout underscore underscorejs javascript js</tags>
     <releaseNotes>See GitHub releases for changelog</releaseNotes>
     <dependencies>
-      <dependency id="knockoutjs" version="2.2" />
-      <dependency id="underscore.js" version="1.6.0" />
+      <dependency id="knockoutjs" version="3.4.0" />
+      <dependency id="underscore.js" version="1.8.3" />
     </dependencies>
   </metadata>
   <files>
     <file src="build\*.js" target="content\scripts" />
+    <file src="build\*.d.ts" target="content\scripts\typings\underscore-ko" />
   </files>
 </package>

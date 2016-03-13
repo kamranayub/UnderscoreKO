@@ -1,4 +1,5 @@
 (function (factory) {
+  var define = define;
   if (typeof define === 'function' && define['amd']) {
     // AMD Anonymous module
     define(['knockout', 'underscore'], factory);
@@ -29,11 +30,11 @@
     "sortBy", "sortBy_",
     "groupBy", "groupBy_",
     "indexBy",
-    "countBy", 
-    "sortedIndex",
+    "countBy",
     "shuffle", "shuffle_",
     "sample",
     "size",
+    "partition",
 
     // Arrays
     "first", "head", "take",
@@ -43,25 +44,26 @@
     "compact", "compact_",
     "flatten", "flatten_",
     "without", "without_",
-    "partition",
     "union","union_",
-    "intersection",
-    "difference",
+    "intersection", "intersection_",
+    "difference", "difference_",
     "uniq", "unique", "uniq_", "unique_",
     "zip", "zip_",
+    "unzip", "unzip_",
     "object",
-    "indexOf",
     "lastIndexOf",
     "sortedIndex",
-    "range",
+    "findIndex",
+    "findLastIndex",
 
     // Misc
     "chain"
   ],
+  
+  // methods that take a ...arrays parameter
   arrayMethods = [
     "union", "union_",
-    "intersection", "intersection_",
-    "difference", "difference_",
+    "intersection", "intersection_",    
     "zip", "zip_"
   ];
 
@@ -97,6 +99,4 @@
       };
     }
   });
-
-})
-);
+}));

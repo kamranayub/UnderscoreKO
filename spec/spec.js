@@ -15,7 +15,9 @@ describe("UnderscoreKO", function () {
     "indexBy",
     "countBy",    
     "groupBy",
-    "partition"
+    "partition",
+    "findIndex",
+    "findLastIndex"
   ],
   reductionFns = [
     "each", "forEach",
@@ -69,10 +71,10 @@ describe("UnderscoreKO", function () {
     "intersection_",
     "difference_",
     "uniq_", "unique_",
-    "zip_"
+    "zip_", "unzip_"
   ];
 
-  it("supports all 51 underscore methods", function () {
+  it("supports all 53 underscore methods", function () {
     var count = 0;
 
     _.union(predicateFns, reductionFns, noArgFns, singleArgFns, arrayArgFns, miscFns).forEach(function (fn) {
@@ -80,7 +82,7 @@ describe("UnderscoreKO", function () {
       expect(vm.arr[fn]).toBeDefined();
     });
 
-    expect(count).toEqual(51);
+    expect(count).toEqual(53);
   });
 
   it("supports 18 mutator methods", function () {
@@ -91,7 +93,7 @@ describe("UnderscoreKO", function () {
       expect(vm.arr[fn]).toBeDefined();
     });
 
-    expect(count).toEqual(18);
+    expect(count).toEqual(19);
   });
 
   it("supports all predicate functions", function () {
@@ -147,6 +149,10 @@ describe("UnderscoreKO", function () {
 
   it("supports where", function () {
     expect(vm.objs.where({b:1})).toEqual([vm.objs()[0],vm.objs()[2]]);
+  });
+  
+  it("supports findWhere", function () {
+    expect(vm.objs.findWhere({b:1})).toEqual(vm.objs()[0]);
   });
 
   it("supports invoke", function () {
@@ -239,7 +245,7 @@ describe("UnderscoreKO", function () {
     it("via shuffle_", function () {
       mutable.shuffle_();
 
-      expect(mutable()).toNotEqual(vm.arr());
+      expect(mutable()).not.toEqual(vm.arr());
     });
 
     it("via rest_", function () {
@@ -302,6 +308,22 @@ describe("UnderscoreKO", function () {
         [3, "d", 40],
         [4, "e", 50]
       ]);
+    });
+    
+    it("via unzip_", function () {
+      
+      // set zipped value
+      mutable([
+        [0, "a", 10],
+        [1, "b", 20],
+        [2, "c", 30],
+        [3, "d", 40],
+        [4, "e", 50]
+      ]);
+      
+      mutable.unzip_();
+      
+      expect(mutable()).toEqual([[0, 1, 2, 3, 4], ["a", "b", "c", "d", "e"], [10, 20, 30, 40, 50]]);
     });
 
     it("mutates when using KO arrays", function () {

@@ -1,0 +1,31 @@
+{
+  "name": "underscore-ko",
+  "homepage": "https://github.com/kamranayub/UnderscoreKO",
+  "authors": [
+    "Kamran Ayub <http://kamranicus.com>"
+  ],
+  "main": "src/tsconfig.json",
+  "moduleType": "globals",
+  "license": "MIT",
+  "keywords": [
+    "underscore",
+    "knockout",
+    "underscoreko",
+    "underscore-ko"
+  ],
+  "dependencies": {
+    "knockout": "~3.4.0",
+    "underscore": "~1.8.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "spec",
+    "src",
+    "tools",
+    "Gruntfile.js",
+    "UnderscoreKO.nuspec",
+    "CONTRIBUTING.md"
+  ]
+}

@@ -5,11 +5,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    jslint: {
-      client: {
-        src: [
-          'src/**/*.js'
-        ]
+    jasmine: {
+      tests: {
+        src: [           
+          'bower_components/knockout/dist/knockout.js', 
+          'bower_components/underscore/underscore.js',
+          'build/*.js'
+        ],
+        options: {
+          specs: 'spec/spec.js'
+        }
       }
     },
 
@@ -23,22 +28,38 @@ module.exports = function(grunt) {
         ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n'
       },
       dist: {
-        src: ['src/underscore-ko.js'],
-        dest: 'build/<%= pkg.name %>-<%= pkg.version %>.js',
+        src: ['build/<%= pkg.name %>.js'],
+        dest: 'build/<%= pkg.name %>.js',
+        nonull: true
+      },
+      min: {
+        src: ['build/<%= pkg.name %>.min.js'],
+        dest: 'build/<%= pkg.name %>.min.js',
         nonull: true
       }
     },
 
     min: {
       dist: {
-        src: ['build/<%= pkg.name %>-<%= pkg.version %>.js'],
-        dest: 'build/<%= pkg.name %>-<%= pkg.version %>.min.js'
+        src: ['build/<%= pkg.name %>.js'],
+        dest: 'build/<%= pkg.name %>.min.js'
       }
     },
 
-    clean: ['build/*.js', 'build/*.nupkg'],
+    clean: ['build/**/*'],
 
     shell: {
+      
+      tsc: {
+        command: 'node_modules\\.bin\\tsc -p src --outFile build\\<%= pkg.name %>.js',
+        stdout: true
+      },
+      
+      tscw: {
+        command: 'node_modules\\.bin\\tsc -p src --outFile build\\<%= pkg.name %>.js --watch',
+        stdout: true
+      },
+      
       nuget: {
         command: 'tools\\nuget pack UnderscoreKO.nuspec -Version <%= pkg.version %> -Output build',
         stdout: true
@@ -48,13 +69,12 @@ module.exports = function(grunt) {
 
   // Exec task
   grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-jslint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-min');
-  grunt.loadNpmTasks('grunt-jasmine-node');
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   // Default task.  
-  grunt.registerTask('default', ['clean', 'concat', 'min', 'shell']);
-
+  grunt.registerTask('compile', ['clean', 'shell:tscw']);
+  grunt.registerTask('default', ['clean', 'shell:tsc', 'jasmine', 'min', 'concat', 'shell:nuget']);
 };
