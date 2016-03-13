@@ -151,8 +151,24 @@ describe("UnderscoreKO", function () {
     expect(vm.objs.where({b:1})).toEqual([vm.objs()[0],vm.objs()[2]]);
   });
   
+  it("supports where with observable values", function () {
+    var obsa = ko.observable({ b: 1 }),
+        obsb = ko.observable({ b: 0 }),
+        arr  = ko.observableArray([obsa, obsb]);
+    
+    expect(arr.where({b:1})).toEqual([obsa]);
+  });
+  
   it("supports findWhere", function () {
     expect(vm.objs.findWhere({b:1})).toEqual(vm.objs()[0]);
+  });
+  
+  it("supports findWhere with observable values", function () {
+    var obsa = ko.observable({ b: 1 }),
+        obsb = ko.observable({ b: 0 }),
+        arr  = ko.observableArray([obsa, obsb]);
+        
+    expect(arr.findWhere({b:1})).toEqual(obsa);
   });
 
   it("supports invoke", function () {

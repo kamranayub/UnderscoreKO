@@ -1,7 +1,7 @@
 {
   "name": "underscore-ko",
   "description": "Dead simple utility that attaches Underscore.js array and collection functions (and mutators) to Knockout.js observable arrays.",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "author": "Kamran Ayub <http://kamranicus.com>",
   "homepage": "https://github.com/kamranayub/UnderscoreKO",
   "repository": {

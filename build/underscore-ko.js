@@ -1,4 +1,4 @@
-// underscore-ko - v1.8.0 - 2016-03-13
+// underscore-ko - v1.8.1 - 2016-03-13
 // https://github.com/kamranayub/UnderscoreKO
 // Copyright (c) 2016 Kamran Ayub <http://kamranicus.com>; Licensed MIT */
 (function (factory) {
@@ -66,6 +66,31 @@
         "intersection", "intersection_",
         "zip", "zip_"
     ];
+    // replaces _.property with support for KO observable values
+    _.property = function (key) {
+        return function (obj) {
+            return obj == null ? void 0 : ko.utils.unwrapObservable(obj)[key];
+        };
+    };
+    // replaces _.propertyOf with support for KO observable values
+    _.propertyOf = function (obj) {
+        return obj == null ? function () { } : function (key) {
+            return ko.utils.unwrapObservable(obj)[key];
+        };
+    };
+    // replaces _.isMatch with support for KO observable values
+    _.isMatch = function (object, attrs) {
+        var keys = _.keys(attrs), length = keys.length;
+        if (object == null)
+            return !length;
+        var obj = Object(ko.utils.unwrapObservable(object));
+        for (var i = 0; i < length; i++) {
+            var key = keys[i];
+            if (attrs[key] !== obj[key] || !(key in obj))
+                return false;
+        }
+        return true;
+    };
     _.each(_.union(methods, arrayMethods), function (fn) {
         // Let's be good and safe Javascript citizens!
         if (!ko.observableArray.fn[fn]) {
