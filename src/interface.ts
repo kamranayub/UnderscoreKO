@@ -34,14 +34,14 @@ interface KnockoutObservableArrayFunctions<T> {
 	* @param context `this` object in `iterator`, optional.
 	* @return The mapped array result.
 	**/
-  map<T, TResult>(    
+  map<TResult>(    
     iterator: _.ListIterator<T, TResult>,
     context?: any): TResult[];
 
 	/**
 	* @see _.map
 	**/
-  collect<T, TResult>(    
+  collect<TResult>(    
     iterator: _.ListIterator<T, TResult>,
     context?: any): TResult[];
 
@@ -55,7 +55,7 @@ interface KnockoutObservableArrayFunctions<T> {
 	* @param context `this` object in `iterator`, optional.
 	* @return Reduced object result.
 	**/
-  reduce<T, TResult>(    
+  reduce<TResult>(    
     iterator: _.MemoIterator<T, TResult>,
     memo?: TResult,
     context?: any): TResult;
@@ -63,7 +63,7 @@ interface KnockoutObservableArrayFunctions<T> {
 	/**
 	* @see _.reduce
 	**/
-  inject<T, TResult>(
+  inject<TResult>(
     iterator: _.MemoIterator<T, TResult>,
     memo?: TResult,
     context?: any): TResult;
@@ -71,7 +71,7 @@ interface KnockoutObservableArrayFunctions<T> {
 	/**
 	* @see _.reduce
 	**/
-  foldl<T, TResult>(    
+  foldl<TResult>(    
     iterator: _.MemoIterator<T, TResult>,
     memo?: TResult,
     context?: any): TResult;
@@ -85,7 +85,7 @@ interface KnockoutObservableArrayFunctions<T> {
 	* @param context `this` object in `iterator`, optional.
 	* @return Reduced object result.
 	**/
-  reduceRight<T, TResult>(    
+  reduceRight<TResult>(    
     iterator: _.MemoIterator<T, TResult>,
     memo?: TResult,
     context?: any): TResult;
@@ -93,7 +93,7 @@ interface KnockoutObservableArrayFunctions<T> {
 	/**
 	* @see _.reduceRight
 	**/
-  foldr<T, TResult>(    
+  foldr<TResult>(    
     iterator: _.MemoIterator<T, TResult>,
     memo?: TResult,
     context?: any): TResult;
@@ -287,7 +287,7 @@ interface KnockoutObservableArrayFunctions<T> {
 	* @param context `this` object in `iterator`, optional.
 	* @return A sorted copy of `list`.
 	**/
-  sortBy<T, TSort>(
+  sortBy<TSort>(
     iterator?: _.ListIterator<T, TSort>,
     context?: any): T[];
 
@@ -528,7 +528,7 @@ interface KnockoutObservableArrayFunctions<T> {
 	* @param context 'this' object in `iterator`, optional.
 	* @return Copy of `array` where all elements are unique.
 	**/
-  uniq<T, TSort>(
+  uniq<TSort>(
     isSorted?: boolean,
     iterator?: _.ListIterator<T, TSort>,
     context?: any): T[];
@@ -536,21 +536,21 @@ interface KnockoutObservableArrayFunctions<T> {
 	/**
 	* @see _.uniq
 	**/
-  uniq<T, TSort>(
+  uniq<TSort>(
     iterator?: _.ListIterator<T, TSort>,
     context?: any): T[];
 
 	/**
 	* @see _.uniq
 	**/
-  unique<T, TSort>(
+  unique<TSort>(
     iterator?: _.ListIterator<T, TSort>,
     context?: any): T[];
 
 	/**
 	* @see _.uniq
 	**/
-  unique<T, TSort>(
+  unique<TSort>(
     isSorted?: boolean,
     iterator?: _.ListIterator<T, TSort>,
     context?: any): T[];
@@ -644,7 +644,7 @@ interface KnockoutObservableArrayFunctions<T> {
 	* @param iterator Iterator to compute the sort ranking of each value, optional.
 	* @return The index where `value` should be inserted into `list`.
 	**/
-  sortedIndex<T, TSort>(
+  sortedIndex<TSort>(
     value: T,
     iterator?: (x: T) => TSort, context?: any): number;	  
 

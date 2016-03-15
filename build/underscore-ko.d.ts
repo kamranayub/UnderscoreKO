@@ -26,11 +26,11 @@ interface KnockoutObservableArrayFunctions<T> {
     * @param context `this` object in `iterator`, optional.
     * @return The mapped array result.
     **/
-    map<T, TResult>(iterator: _.ListIterator<T, TResult>, context?: any): TResult[];
+    map<TResult>(iterator: _.ListIterator<T, TResult>, context?: any): TResult[];
     /**
     * @see _.map
     **/
-    collect<T, TResult>(iterator: _.ListIterator<T, TResult>, context?: any): TResult[];
+    collect<TResult>(iterator: _.ListIterator<T, TResult>, context?: any): TResult[];
     /**
     * Also known as inject and foldl, reduce boils down a list of values into a single value.
     * Memo is the initial state of the reduction, and each successive step of it should be
@@ -41,15 +41,15 @@ interface KnockoutObservableArrayFunctions<T> {
     * @param context `this` object in `iterator`, optional.
     * @return Reduced object result.
     **/
-    reduce<T, TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
+    reduce<TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
     /**
     * @see _.reduce
     **/
-    inject<T, TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
+    inject<TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
     /**
     * @see _.reduce
     **/
-    foldl<T, TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
+    foldl<TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
     /**
     * The right-associative version of reduce. Delegates to the JavaScript 1.8 version of
     * reduceRight, if it exists. `foldr` is not as useful in JavaScript as it would be in a
@@ -59,11 +59,11 @@ interface KnockoutObservableArrayFunctions<T> {
     * @param context `this` object in `iterator`, optional.
     * @return Reduced object result.
     **/
-    reduceRight<T, TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
+    reduceRight<TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
     /**
     * @see _.reduceRight
     **/
-    foldr<T, TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
+    foldr<TResult>(iterator: _.MemoIterator<T, TResult>, memo?: TResult, context?: any): TResult;
     /**
     * Looks through each value in the list, returning the first one that passes a truth
     * test (iterator). The function returns as soon as it finds an acceptable element,
@@ -201,7 +201,7 @@ interface KnockoutObservableArrayFunctions<T> {
     * @param context `this` object in `iterator`, optional.
     * @return A sorted copy of `list`.
     **/
-    sortBy<T, TSort>(iterator?: _.ListIterator<T, TSort>, context?: any): T[];
+    sortBy<TSort>(iterator?: _.ListIterator<T, TSort>, context?: any): T[];
     /**
     * @see _.sortBy
     * @param iterator Sort iterator for each element within `list`.
@@ -381,19 +381,19 @@ interface KnockoutObservableArrayFunctions<T> {
     * @param context 'this' object in `iterator`, optional.
     * @return Copy of `array` where all elements are unique.
     **/
-    uniq<T, TSort>(isSorted?: boolean, iterator?: _.ListIterator<T, TSort>, context?: any): T[];
+    uniq<TSort>(isSorted?: boolean, iterator?: _.ListIterator<T, TSort>, context?: any): T[];
     /**
     * @see _.uniq
     **/
-    uniq<T, TSort>(iterator?: _.ListIterator<T, TSort>, context?: any): T[];
+    uniq<TSort>(iterator?: _.ListIterator<T, TSort>, context?: any): T[];
     /**
     * @see _.uniq
     **/
-    unique<T, TSort>(iterator?: _.ListIterator<T, TSort>, context?: any): T[];
+    unique<TSort>(iterator?: _.ListIterator<T, TSort>, context?: any): T[];
     /**
     * @see _.uniq
     **/
-    unique<T, TSort>(isSorted?: boolean, iterator?: _.ListIterator<T, TSort>, context?: any): T[];
+    unique<TSort>(isSorted?: boolean, iterator?: _.ListIterator<T, TSort>, context?: any): T[];
     /**
     * Merges together the values of each of the arrays with the values at the corresponding position.
     * Useful when you have separate data sources that are coordinated through matching array indexes.
@@ -464,7 +464,7 @@ interface KnockoutObservableArrayFunctions<T> {
     * @param iterator Iterator to compute the sort ranking of each value, optional.
     * @return The index where `value` should be inserted into `list`.
     **/
-    sortedIndex<T, TSort>(value: T, iterator?: (x: T) => TSort, context?: any): number;
+    sortedIndex<TSort>(value: T, iterator?: (x: T) => TSort, context?: any): number;
     /************
      * Mutators *
      ************/

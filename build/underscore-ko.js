@@ -1,4 +1,4 @@
-// underscore-ko - v1.8.1 - 2016-03-13
+// underscore-ko - v1.8.2 - 2016-03-15
 // https://github.com/kamranayub/UnderscoreKO
 // Copyright (c) 2016 Kamran Ayub <http://kamranicus.com>; Licensed MIT */
 (function (factory) {
