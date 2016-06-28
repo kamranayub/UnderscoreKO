@@ -1,4 +1,4 @@
-// underscore-ko - v1.8.2 - 2016-03-15
+// underscore-ko - v1.8.3 - 2016-06-27
 // https://github.com/kamranayub/UnderscoreKO
 // Copyright (c) 2016 Kamran Ayub <http://kamranicus.com>; Licensed MIT */
 (function (factory) {
@@ -69,13 +69,13 @@
     // replaces _.property with support for KO observable values
     _.property = function (key) {
         return function (obj) {
-            return obj == null ? void 0 : ko.utils.unwrapObservable(obj)[key];
+            return obj == null ? void 0 : ko.utils.unwrapObservable(ko.utils.unwrapObservable(obj)[key]);
         };
     };
     // replaces _.propertyOf with support for KO observable values
     _.propertyOf = function (obj) {
         return obj == null ? function () { } : function (key) {
-            return ko.utils.unwrapObservable(obj)[key];
+            return ko.utils.unwrapObservable(ko.utils.unwrapObservable(obj)[key]);
         };
     };
     // replaces _.isMatch with support for KO observable values
@@ -86,7 +86,7 @@
         var obj = Object(ko.utils.unwrapObservable(object));
         for (var i = 0; i < length; i++) {
             var key = keys[i];
-            if (attrs[key] !== obj[key] || !(key in obj))
+            if (ko.utils.unwrapObservable(attrs[key]) !== ko.utils.unwrapObservable(obj[key]) || !(key in obj))
                 return false;
         }
         return true;
