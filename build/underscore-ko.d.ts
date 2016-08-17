@@ -489,6 +489,10 @@ interface KnockoutObservableArrayFunctions<T> {
      */
     sortBy_<TSort>(iterator?: _.ListIterator<T, TSort>, context?: any): T[];
     /**
+   * Mutator version of `_.sortBy`
+   */
+    sortBy_(iterator: string, context?: any): T[];
+    /**
      * Mutator version of `_.groupBy`
      */
     groupBy_(iterator?: _.ListIterator<T, any>, context?: any): _.Dictionary<T[]>;
