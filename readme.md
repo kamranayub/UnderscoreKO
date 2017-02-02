@@ -67,7 +67,7 @@ View the [live jsFiddle demo](http://jsfiddle.net/kamranayub/exnqe/)
 
 ## Documentation ##
 
-See the [Underscore.js](http://documentcloud.github.com/underscore/) documentation for more information on the API. All array and collection methods are supported with the exception of any I felt didn't provide value (`.toArray()` for example).
+See the [Underscore.js](http://underscorejs.org/) documentation for more information on the API. All array and collection methods are supported with the exception of any I felt didn't provide value (`.toArray()` for example).
 
 See `spec.js` for examples of how to use specific functions, but I'm telling you, it's as you'd expect.
 
