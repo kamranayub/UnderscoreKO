@@ -1,5 +1,7 @@
 # UnderscoreKO
 
+[![npm](https://img.shields.io/npm/v/underscore-ko.svg)](https://github.com/kamranayub/UnderscoreKO) [![npm](https://img.shields.io/npm/dt/underscore-ko.svg)](https://github.com/kamranayub/UnderscoreKO) [![NuGet](https://img.shields.io/nuget/v/UnderscoreKO.svg)](https://github.com/kamranayub/UnderscoreKO) [![NuGet](https://img.shields.io/nuget/dt/UnderscoreKO.svg)](https://github.com/kamranayub/UnderscoreKO) [![Bower](https://img.shields.io/bower/v/underscore-ko.svg)](https://github.com/kamranayub/UnderscoreKO)
+
 ## [Underscore.js](http://documentcloud.github.com/underscore/) + [Knockout](http://knockoutjs.com) = Array Happy Fun Time!
 
 This tiny library (< 1KB) adds all the collection and array methods you've come to love in Underscore.js to your Knockout observable arrays. It will not override any existing functionality (if any exists).
